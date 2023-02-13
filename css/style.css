@@ -1,0 +1,702 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* ////////////////////////////////////////////////////////
+  Header Section
+  ////////////////////////////////////////////////////////// */
+.header {
+  background-color: #d0ebcf;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 9.6rem;
+  padding: 2.6rem 4.8rem;
+  position: relative;
+}
+.logo {
+  height: 7rem;
+}
+
+/* ////////////////////////////////////////////////////////
+  Navigation Section
+  ////////////////////////////////////////////////////////// */
+
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  gap: 4.8rem;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  text-decoration: none;
+  color: #333;
+  font-size: 2rem;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #ff7f50;
+}
+.nBtn {
+  color: #333;
+  font-size: 2rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s;
+  padding: 1rem 2rem 1rem 2rem;
+  border-radius: 0.9rem;
+}
+/* I am applying these values to the header if sticky is the parent element of header, hence I will add sticky to the body */
+/* I needed to add the sticky class to the body to the body because if we want to add 9.6rem to the top of the hero section (to replace the lost header and prevent the page jumping) we need to make sticky a parent of the header and hero-section */
+.sticky .header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(255, 255, 255, 0.97);
+  z-index: 99999;
+  box-shadow: 0 1rem 3.2rem rgba(0, 0, 0, 0.09);
+}
+.sticky .section-hero {
+  margin-top: 9.6rem;
+}
+
+/* ////////////////////////////////////////////////////////
+ MOBILE NAVIGATION
+  ////////////////////////////////////////////////////////// */
+.btn-mobile-nav {
+  border: none;
+  cursor: pointer;
+  background: none;
+  display: none;
+}
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: black;
+}
+.icon-mobile-nav[name='close-outline'] {
+  display: none;
+}
+
+/* ////////////////////////////////////////////////////////
+  Hero Section
+  ////////////////////////////////////////////////////////// */
+
+.section-hero {
+  background-color: #d0ebcf;
+
+  padding: 16rem 6rem 16rem 6rem;
+}
+.hero {
+  max-width: 140rem;
+  /* center it */
+  margin: 0 auto;
+  align-items: center;
+  gap: 9.6rem;
+}
+
+.hero-img {
+  width: 100%;
+  border-radius: 2rem;
+}
+.hero-description {
+  font-size: 2.4rem;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+  margin: 4.8rem 0 4.8rem 0;
+}
+
+.hero-rating-box {
+  display: flex;
+  flex-direction: row;
+  gap: 7px;
+  margin-top: 4.8rem;
+  font-size: 2rem;
+  align-items: center;
+  z-index: -1000;
+}
+
+.star-icons {
+  display: flex;
+  list-style: none;
+}
+
+.rating-text-rating {
+  font-size: 2.4rem;
+}
+
+/* ////////////////////////////////////////////////////////
+  Featured Section
+  ////////////////////////////////////////////////////////// */
+.section-featured {
+  background-color: #fff;
+}
+.featured-container {
+  gap: 20rem;
+}
+
+.featured-text {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+/* ////////////////////////////////////////////////////////
+  Lessons Section
+  ////////////////////////////////////////////////////////// */
+
+.section-lessons {
+  padding: 12rem 0 0 0;
+  max-width: 110rem;
+  margin: 0 auto;
+}
+.lessons {
+  justify-self: center;
+  padding: 0 0 4rem 0;
+  gap: 20rem;
+}
+
+.lessons-box {
+  border-radius: 2rem;
+  width: 120%;
+  margin-bottom: 4rem;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  transition: all 0.3s;
+}
+
+.lessons-box:hover {
+  transform: translateY(-1.2rem);
+}
+.lessons-img {
+  width: 100%;
+  border-radius: 2rem 2rem 0 0;
+}
+.heading-tertiary {
+  margin: 2rem 0 2rem 8rem;
+}
+
+.lessons-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  margin: 2rem 0rem 2rem 2rem;
+}
+
+.list-item {
+  font-size: 2.4rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.lessons-icon {
+  font-size: 2.4rem;
+}
+
+.lesson-info-container {
+  font-size: 2.4rem;
+  line-height: 3rem;
+  letter-spacing: 0.05rem;
+
+  background-color: #ffc333;
+  display: flex;
+  justify-content: center;
+
+  padding: 5rem;
+  margin-bottom: 0;
+}
+
+.lesson-info {
+  max-width: 100rem;
+}
+/* ////////////////////////////////////////////////////////
+  HOW IT WORKS SECTION 
+  ////////////////////////////////////////////////////////// */
+
+.container {
+  max-width: 120rem;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding-top: 14rem;
+}
+.section-how {
+  background-color: #ffe7ad;
+  padding-bottom: 0.5rem;
+}
+
+.container-how {
+  justify-items: center;
+  align-items: center;
+  gap: 10rem;
+
+  max-width: 120rem;
+  margin: 0 auto;
+  margin-bottom: 20rem;
+}
+
+.steps {
+  font-size: 1.8rem;
+  font-weight: 500;
+  display: inline-block;
+  background-color: #ffc333;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+}
+
+.step-1 {
+  background-color: #ef798a;
+}
+.step-3 {
+  background-color: #eb5e55;
+}
+.step-text-box {
+  background-color: #fffaef;
+  padding: 4rem;
+  border-radius: 10%;
+  width: 100%;
+}
+.description-how {
+  font-size: 2rem;
+  line-height: 3.2rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 1.6rem;
+}
+.img-how {
+  width: 100%;
+  border-radius: 2rem;
+}
+
+/* ////////////////////////////////////////////////////////
+  Testimonial section SECTION 
+  ////////////////////////////////////////////////////////// */
+.testimonial-section {
+  background-color: #fff;
+  height: 70rem;
+  padding-top: 2rem;
+}
+
+.testimonial-outer-container {
+  height: 50rem;
+  max-width: 110rem;
+  margin: 0 auto;
+  position: relative;
+}
+.testimonial-container {
+  overflow: hidden;
+  position: relative;
+  height: 50rem;
+}
+
+.testimonial-title {
+  padding-top: 8rem;
+  margin-bottom: 4rem;
+}
+
+.testimonial-secondary-title {
+  margin-bottom: 8rem;
+}
+.slide {
+  position: absolute;
+  top: 0;
+  width: 110rem;
+  height: 30rem;
+  padding: 0 8rem 0 8rem;
+
+  background-color: #fff;
+
+  margin-top: 4rem;
+
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  transition: transform 1s;
+}
+
+.testimonial-img {
+  width: 25rem;
+  border-radius: 2rem;
+  margin-left: 4%;
+}
+
+.testimonial-name {
+  margin-bottom: 2rem;
+}
+.testimonial-text {
+  font-size: 2rem;
+  line-height: 2.6rem;
+  letter-spacing: 0.5px;
+  margin-right: 4rem;
+}
+
+.slider__btn {
+  position: absolute;
+  top: 90%;
+  z-index: 10000;
+
+  border: none;
+  background: #ffc333;
+
+  color: #333;
+  border-radius: 50%;
+  height: 5.5rem;
+  width: 5.5rem;
+  font-size: 3.25rem;
+  cursor: pointer;
+
+  /* center icon */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider__btn--left {
+  left: 6%;
+  transform: translate(-270%, -30%);
+}
+
+.slider__btn--right {
+  right: 6%;
+  transform: translate(270%, -30%);
+}
+
+/* Dots */
+.dots {
+  position: absolute;
+  top: 140%;
+  /* Here we move it 50% left */
+  left: 50%;
+  /* We then move it 50% right of itself and this centers it as 50% left moves it 50% starting from the start of the element */
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.dots__dot {
+  border: none;
+  background-color: #fff;
+  border: #ffc333 2px solid;
+  height: 1rem;
+  width: 3rem;
+  border-radius: 2rem;
+  margin-right: 1.75rem;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.dots__dot:last-child {
+  margin: 0;
+}
+
+.dots__dot--active {
+  background-color: #ffc333;
+}
+
+/* ////////////////////////////////////////////////////////
+  Pricing SECTION 
+  ////////////////////////////////////////////////////////// */
+.section-pricing {
+  display: flex;
+  justify-content: center;
+  margin-top: 12rem;
+  padding-top: 12rem;
+}
+.pricing-container {
+  max-width: 120rem;
+}
+.pricing-title {
+  margin-bottom: 4rem;
+}
+.pricing-secondary {
+  margin-bottom: 8rem;
+}
+
+.pricing-plan {
+  padding: 8rem 7rem 8rem 7rem;
+  border-radius: 2rem;
+  box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.075);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
+}
+.plan-name {
+  margin-bottom: 2.4rem;
+  text-transform: uppercase;
+}
+.price {
+  font-size: 4.4rem;
+
+  font-weight: 600;
+}
+.plan-price {
+  font-size: 2rem;
+}
+.plan-header-text {
+  font-size: 2rem;
+}
+.pricing-ul {
+  list-style: none;
+  margin-top: 5rem;
+  gap: 3.2rem;
+}
+.list-item {
+  font-size: 2rem;
+}
+
+.checkmark-icon {
+  color: green;
+  font-size: 3rem;
+}
+
+/* Adding the best value banner */
+.fifty {
+  position: relative;
+  overflow: hidden;
+  background-color: #d0ebcf;
+  transition: 0.3s;
+}
+.fifty::after {
+  content: 'Best value';
+  position: absolute;
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 0.8rem 8rem;
+  background-color: #ffc333;
+  top: 4%;
+  right: -16%;
+  transform: rotate(45deg);
+
+  text-transform: uppercase;
+}
+.fifty:hover {
+  transform: translateY(-1.2rem);
+}
+
+.twentyfive {
+  border: #d0ebcf solid 0.1rem;
+  transition: 0.3s;
+}
+
+.twentyfive {
+  border: #d0ebcf solid 0.1rem;
+  transition: 0.3s;
+}
+.twentyfive:hover {
+  transform: translateY(-1.2rem);
+}
+.price-btn {
+  margin-top: 5rem;
+}
+
+/* ////////////////////////////////////////////////////////
+Custom Pricing SECTION 
+////////////////////////////////////////////////////////// */
+.custom-price-section {
+  max-width: 80rem;
+  padding: 4rem 0;
+  border-radius: 2rem;
+  box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.075);
+
+  background-color: #fff;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
+  border: #ffc333 solid 0.1rem;
+  margin-top: 10rem;
+  margin-bottom: 20rem;
+  transition: 0.3s;
+}
+
+.custom-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.custom-price-section:hover {
+  transform: translateY(-1.2rem);
+}
+
+.custom-title {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+.custom-text {
+  font-size: 2rem;
+  margin-bottom: 4rem;
+}
+
+/* ////////////////////////////////////////////////////////
+ABOUT  SECTION 
+////////////////////////////////////////////////////////// */
+.about-section {
+  padding: 5rem 0 20rem 0;
+  margin-bottom: 0;
+}
+.about-container {
+  max-width: 140rem;
+  background-color: #d0ebcf;
+  padding: 7rem 7rem 6rem 7rem;
+  border-radius: 4rem;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+}
+.about-title {
+  margin-bottom: 7rem;
+}
+.about-intro {
+  grid-template-columns: 3fr 1fr;
+}
+
+.about-text-box {
+  font-size: 2rem;
+  line-height: 2.6rem;
+  padding: 0rem 2rem 0 2rem;
+  border-radius: 2rem;
+}
+.about-text {
+  margin-bottom: 6rem;
+}
+.about-img {
+  width: 100%;
+  border-radius: 2rem;
+}
+.about-btn {
+  display: flex;
+  justify-items: center;
+}
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video {
+  border-radius: 2rem;
+  width: 80rem;
+  height: 50rem;
+  margin-top: 10rem;
+}
+.video-text {
+  font-size: 2.8rem;
+  color: black;
+  padding: 2rem;
+  background-color: #fafdfa;
+  border-radius: 2rem;
+}
+
+/* ////////////////////////////////////////////////////////
+FAQ SECTION 
+////////////////////////////////////////////////////////// */
+
+.faq-section {
+  background-color: #fbae81;
+}
+.accordion-container {
+  height: 90rem;
+  max-width: 110rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 22rem 0 22rem 0;
+}
+
+.faq-title {
+  margin-bottom: 9rem;
+}
+
+.accordions {
+  font-size: 2rem;
+  background-color: #feefe6;
+  padding: 2rem;
+  margin: 1rem 0 1rem 0;
+  border-radius: 2rem;
+  width: 110rem;
+  transition: all 0.3s;
+}
+
+.icon-faq {
+  font-size: 2.4rem;
+  color: black;
+}
+
+.question {
+  display: flex;
+  justify-content: space-between;
+}
+
+.accordion-btn {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+  border: none;
+  background-color: #feefe6;
+}
+
+/* Hide text */
+.answer {
+  display: none;
+}
+
+.show-text .answer {
+  display: block;
+}
+
+.minus-icon {
+  display: none;
+}
+.show-text .minus-icon {
+  display: inline;
+}
+
+.show-text .plus-icon {
+  display: none;
+}
+
+/* ////////////////////////////////////////////////////////
+Footer SECTION 
+////////////////////////////////////////////////////////// */
+
+.footer-container {
+  gap: 8rem;
+}
+
+.logo-footer {
+  margin-bottom: 1.4rem;
+}
+.copyright {
+  font-size: 1.2rem;
+}
+
+.list {
+  text-decoration: none;
+  gap: 2rem;
+}
+.footer-h5 {
+  margin-bottom: 2rem;
+}
+
+.footer {
+  list-style: none;
+  text-decoration: none;
+}
+
+.footer-link:link,
+.footer-link:visited {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.6rem;
+  transition: all 0.3s;
+}
+.footer-link:hover,
+.footer-link:active {
+  color: #ff7f50;
+}

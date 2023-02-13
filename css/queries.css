@@ -1,0 +1,485 @@
+/* rem and em do NOT depend on HTML font-size in media queries, instead 1rem = 1em = 16px. rem sometimes causes bugs in mediaqueries so lets use em */
+
+/* ////////////////////////////////////////////////////
+Below 1350px (smaller desktops) 1350/16
+//////////////////////////////////////////////////////// */
+@media (max-width: 84em) {
+  section {
+    max-width: 135rem;
+  }
+  .hero-description {
+    font-size: 2.2rem;
+  }
+  .featured-container {
+    gap: 9rem;
+  }
+  h1 {
+    font-size: 4.4rem;
+    line-height: 1.1;
+  }
+
+  .about-container {
+    max-width: 140rem;
+    /* background-color: #d0ebcf; */
+    padding: 7rem 7rem 14rem 7rem;
+    border-radius: 0;
+    box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  }
+  .about-section {
+    padding-bottom: 0;
+  }
+
+  .slider__btn--left {
+    left: 6%;
+    transform: translate(-170%, -30%);
+  }
+
+  .slider__btn--right {
+    right: 6%;
+    transform: translate(170%, -30%);
+  }
+  .video-text {
+    font-size: 2.2rem;
+  }
+}
+
+/* ////////////////////////////////////////////////////
+Below 1265px (Landscape tablets) html here we did 9px / 16px to make each rem worth 9px instead of 16
+//////////////////////////////////////////////////////// */
+
+@media (max-width: 79em) {
+  html {
+    font-size: 56.25%;
+  }
+  section {
+    max-width: 100%;
+  }
+  .lessons {
+    gap: 12rem;
+  }
+  .lessons-box {
+    width: 100%;
+  }
+  .container-how {
+    gap: 6rem;
+  }
+  .img-how {
+    width: 52rem;
+  }
+  .step-text-box {
+    width: 52rem;
+  }
+  .video-container {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+  }
+  .video-text {
+    display: none;
+  }
+}
+
+/* ////////////////////////////////////////////////////
+Below 1064px (smaller landscape tablets) 1064/16 html here we did 8px / 16px to make each rem worth 9px instead of 16
+//////////////////////////////////////////////////////// */
+@media (max-width: 67em) {
+  html {
+    font-size: 50%;
+  }
+
+  .video {
+    border-radius: 2rem;
+    width: 80rem;
+    height: 48rem;
+  }
+}
+
+/* ////////////////////////////////////////////////////
+Below 944 (tablets) 944/16 html here we did 8px / 16px to make each rem worth 9px instead of 16
+//////////////////////////////////////////////////////// */
+@media (max-width: 59em) {
+  .grid {
+    column-gap: 3rem;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-text-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .hero-img-box {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .featured-container {
+    gap: 2.4rem;
+  }
+  .featured-text {
+    font-size: 2.2rem;
+  }
+  .lessons {
+    gap: 2rem;
+  }
+  .lessons-box {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .lesson-info {
+    font-size: 2.2rem;
+  }
+
+  .container-how {
+    gap: 0rem;
+  }
+
+  .img-how {
+    width: 40rem;
+  }
+  .step-text-box {
+    width: 42rem;
+  }
+
+  .slider__btn--left {
+    left: 6%;
+    transform: translate(400%, 440%);
+  }
+
+  .slider__btn--right {
+    right: 6%;
+    transform: translate(-400%, 440%);
+  }
+  .dots {
+    top: 144%;
+    /* Here we move it 50% left */
+    left: 50%;
+    /* We then move it 50% right of itself and this centers it as 50% left moves it 50% starting from the start of the element */
+  }
+
+  .accordions {
+    width: 80rem;
+  }
+  .footer-container {
+    gap: 4rem;
+    grid-template-columns: 1.8fr 1fr;
+  }
+
+  /* .form-section,
+  .form-img {
+    border-radius: 0;
+  } */
+  .form-section {
+    margin: 10rem 2rem;
+  }
+  /*/////////////////////////////////////////////
+   Mobile nav
+   ///////////////////////////////////////////// */
+  .btn-mobile-nav {
+    display: block;
+    z-index: 1000;
+  }
+
+  .main-nav {
+    background-color: rgba(255, 255, 255, 0.97);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in;
+
+    /* hide nav */
+    /* 1) Hide visually */
+    opacity: 0;
+    /* 2) Make unaccessible to key board */
+    pointer-events: none;
+
+    /* 3) Hide it from screen readers */
+    visibility: hidden;
+    /* display: none; */
+  }
+
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  /* Only when nav-open is displayed we want to display this class */
+  .nav-open .icon-mobile-nav[name='close-outline'] {
+    display: block;
+  }
+  .nav-open .icon-mobile-nav[name='menu-outline'] {
+    display: none;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    gap: 4.8rem;
+    text-align: center;
+  }
+  .main-nav-link:link,
+  .main-nav-link:visited,
+  .nBtn {
+    font-size: 3rem;
+  }
+}
+
+/* ////////////////////////////////////////////////////
+Below 800(tablets) 944/16 html here we did 8px / 16px to make each rem worth 9px instead of 16
+//////////////////////////////////////////////////////// */
+
+@media (max-width: 50em) {
+  .testimonial-container {
+    display: grid;
+    position: none;
+    /* column-gap: 9.4rem; */
+    grid-template-columns: repeat(1, 1fr);
+
+    /* background-color: #e3f3e2; */
+    overflow: visible;
+  }
+  .slide {
+    display: block;
+    position: relative;
+    width: 100%;
+    margin-top: 0rem;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .testimonial-img {
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+    border-radius: 50%;
+    transform: translate(-40%, 70%);
+  }
+  .testimonial-name {
+    margin: 0 0 8rem 12rem;
+  }
+  .testimonial-secondary-title {
+    margin-bottom: 0rem;
+  }
+  .slider__btn,
+  .dots {
+    display: none;
+  }
+  .section-pricing {
+    margin-top: 76rem;
+  }
+
+  .pricing-plan {
+    padding: 8rem 4rem 8rem 4rem;
+  }
+
+  .about-intro {
+    grid-template-columns: 1fr;
+  }
+  .about-img-box {
+    display: none;
+  }
+  .footer-container {
+    gap: 2rem;
+  }
+}
+
+/* ////////////////////////////////////////////////////
+Below 700(tablets) 700/16 html here we did 8px / 16px to make each rem worth 9px instead of 16
+//////////////////////////////////////////////////////// */
+
+@media (max-width: 44em) {
+  html {
+    font-size: 44%;
+  }
+}
+/* ////////////////////////////////////////////////////
+Below 630(tablets) 700/16 html here we did 8px / 16px to make each rem worth 9px instead of 16
+//////////////////////////////////////////////////////// */
+@media (max-width: 39em) {
+  .grid--2-cols,
+  .grid--3-cols,
+  .grid--4-cols {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    gap: 3rem;
+  }
+  .btn--full {
+    margin-bottom: 1rem;
+  }
+
+  .section-featured {
+    display: none;
+  }
+  .lessons {
+    gap: 6rem;
+  }
+  .lessons-box {
+    width: 50%;
+  }
+  .lesson-heading,
+  .lesson-subheading {
+    text-align: center;
+  }
+
+  .container-how {
+    gap: 4rem;
+  }
+  .img-how {
+    width: 46rem;
+  }
+  .step-text-box {
+    width: 46rem;
+  }
+
+  .step-img-box:nth-child(3) {
+    grid-row: 4;
+  }
+
+  .testimonial-container {
+    height: 120rem;
+  }
+  .testimonial-secondary-title {
+    text-align: center;
+  }
+  .testimonial-text {
+    margin-right: 0;
+  }
+
+  .slide {
+    margin-top: 4rem;
+  }
+  .section-pricing {
+    margin-top: 95rem;
+  }
+
+  .pricing-title,
+  .pricing-secondary {
+    text-align: center;
+  }
+  .pricing-plan {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .custom-price-section {
+    width: 90%;
+    text-align: center;
+    padding: 4rem 1rem;
+    margin-bottom: 8rem;
+  }
+  .custom-title {
+    font-size: 2.6rem;
+  }
+
+  .about-container {
+    width: 140rem;
+    padding: 7rem 7rem 8rem 7rem;
+  }
+  .about-title {
+    margin-bottom: 0rem;
+  }
+
+  .about-text-box {
+    display: none;
+  }
+  .video-container {
+    gap: 0;
+  }
+
+  .video {
+    margin-top: 6rem;
+    width: 48rem;
+    height: 27rem;
+  }
+  .faq-title {
+    display: none;
+  }
+  .accordion-container::before {
+    content: 'FAQ';
+    font-weight: 600;
+    font-size: 4.6rem;
+    margin-bottom: 7rem;
+  }
+  .accordions {
+    width: 50rem;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+    row-gap: 2.4rem;
+    column-gap: 0rem;
+  }
+  .col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .form-section {
+    height: 70rem;
+    margin-top: 4rem;
+  }
+  .form-container {
+    grid-template-columns: 1fr;
+    padding: 4rem;
+  }
+  .form-img {
+    display: none;
+  }
+
+  .form-content {
+    padding: 0 2rem 0 2rem;
+  }
+}
+
+/* ////////////////////////////////////////////////////
+Below 480px(tablets) 700/16 html here we did 8px / 16px to make each rem worth 9px instead of 16
+//////////////////////////////////////////////////////// */
+@media (max-width: 30em) {
+  .footer-container {
+    grid-template-columns: 1fr;
+
+    row-gap: 3rem;
+  }
+  .form-section {
+    height: 75rem;
+    margin-top: 4rem;
+  }
+}
+
+/* ////////////////////////////////////////////////////
+Below 368px(tablets) 700/16 html here we did 8px / 16px to make each rem worth 9px instead of 16
+//////////////////////////////////////////////////////// */
+
+@media (max-width: 23em) {
+  html {
+    font-size: 37.5%;
+  }
+}
+/* ////////////////////////////////////////////////////
+Below 368px(tablets) 700/16 html here we did 8px / 16px to make each rem worth 9px instead of 16
+//////////////////////////////////////////////////////// */
+
+@media (max-width: 19.5em) {
+  .video {
+    margin-top: 6rem;
+    width: 44rem;
+    height: 25rem;
+  }
+
+  .accordions {
+    width: 44rem;
+  }
+}
